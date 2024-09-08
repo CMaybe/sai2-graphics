@@ -224,6 +224,11 @@ public:
 
 	bool cameraExistsInWorld(const std::string& camera_name) const;
 
+	/**
+	 * @brief Internal cWorld object.
+	 */
+	chai3d::cWorld* _world;
+
 private:
 	void initializeWorld(const std::string& path_to_world_file,
 						 const bool verbose);
@@ -294,10 +299,6 @@ private:
 	int findForceSensorDisplay(const std::string& robot_or_object_name,
 							   const std::string& link_name) const;
 
-	/**
-	 * @brief Internal cWorld object.
-	 */
-	chai3d::cWorld* _world;
 
 	/**
 	 * @brief glfw window
